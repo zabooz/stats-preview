@@ -8,20 +8,22 @@
 }
 body {
     background-color: hsl(233, 47%, 7%);
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 15px;
 
 }
 main {
     display:flex;
     flex-direction: column;
     align-items: center;
-    background-color: hsl(244, 38%, 16%);
+    background-color: hsl(277, 46%, 25%);
     border-radius: 1rem;
     max-width: 20rem;
+    max-height: 90vh;
     margin: auto;
     overflow: hidden;
 }
@@ -67,12 +69,47 @@ h2 {
 section:last-child {
     margin-bottom: 2rem;
 }
-@media only screen and (min-width:601px) {
+@media only screen and (min-width:600px) {
     
+
+    body{
+        flex-direction: row-reverse;
+    }
+    .background-color-div{
+        background-color:hsl(277, 46%, 25%);
+    }
     main {
         display:flex;
         flex-direction: row-reverse;
         max-width: 54rem;
+        height: 400px;
+        margin: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        background-color:hsl(244, 38%, 16%) ;
+    }
+    .deskImg{
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        height: 400px;
+    }
+    .main{
+        height: 400px;
+        width: 400px;
+        padding:2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    h1{
+        text-align: start;
+    }
+    .mainPara,
+    h2,
+    .mainPara{
+        text-align: start;
+        padding:0;
         margin: 0;
     }
     .mobileImg {
@@ -81,15 +118,17 @@ section:last-child {
     .deskImg {
         display:block;
         width: 27rem;
+        opacity: .2
     }
     .main {
+        padding:2rem;
 
     }
     .stats {
         display: flex;
         justify-content: start;
-        gap: 1rem;
-        margin-bottom: 3rem;
+        align-items: flex-start;
+        gap: 3rem;
     }
     .mainPara {
         margin-bottom: 3rem;
